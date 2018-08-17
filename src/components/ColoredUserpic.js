@@ -25,26 +25,32 @@ class ColoredUserpic extends Component {
           onMouseOut={this.changeHovered.bind(this, false)}
           className="box"
           style={{
-            height: `${this.props.size +
-              this.props.margin +
-              this.props.colorWidth}px`,
-            width: `${this.props.size +
-              this.props.margin +
-              this.props.colorWidth}px`,
-            padding: `${this.props.colorWidth}px`,
-            background: `linear-gradient(to right, ${this.state.colors[0]}, ${this.state.colors[1]})`
+            height: `${this.props.size}px`,
+            width: `${this.props.size}px`,
+            background: `linear-gradient(to right, ${this.state.colors[0]}, ${
+              this.state.colors[1]
+            })`
           }}
         >
-          <img
-            alt="avatar"
-            className="avatar"
+          <div
+          className="border"
             style={{
-              height: `${this.props.size}px`,
-              padding: `${this.props.margin}px`,
+              height: `${this.props.size - this.props.colorWidth}px`,
+              width: `${this.props.size - this.props.colorWidth}px`,
               backgroundColor: `${this.props.backgroundColor}`
             }}
-            src={this.props.src}
-          />
+          >
+            <img
+              alt="avatar"
+              className="avatar"
+              style={{
+                height: `${this.props.size -
+                  this.props.colorWidth -
+                  this.props.margin}px`,
+              }}
+              src={this.props.src}
+            />
+          </div>
         </div>
       </div>
     );

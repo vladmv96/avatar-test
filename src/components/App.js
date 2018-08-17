@@ -11,11 +11,11 @@ class App extends Component {
           <ColoredUserpic 
           src={avatar}
           size={150}
-          margin={4}
+          margin={5}
           backgroundColor='red'
           colors={['green', 'blue']}
           hoverColors={['blue', 'green']}
-          colorWidth={6}
+          colorWidth={2}
           />
       </div>
     );
