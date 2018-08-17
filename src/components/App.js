@@ -11,7 +11,7 @@ class App extends Component {
           <ColoredUserpic 
           src={avatar}
           size={150}
-          margin={5}
+          margin={0}
           backgroundColor='red'
           colors={['green', 'blue']}
           hoverColors={['blue', 'green']}
